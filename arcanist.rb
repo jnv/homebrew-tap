@@ -28,4 +28,6 @@ class Arcanist < Formula
   test do
     system "#{bin}/arc", "help"
   end
+  
+  
 end
