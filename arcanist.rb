@@ -2,7 +2,8 @@ class Arcanist < Formula
   desc "Phabricator Arcanist Tool"
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
 
-  depends_on "php"
+  # Use macOS's built-in php because brews' depends on broken curl-openssl
+  # depends_on "php"
 
   head "https://github.com/phacility/arcanist.git"
   resource "libphutil" do
