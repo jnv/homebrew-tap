@@ -5,7 +5,7 @@ class Arcanist < Formula
   # Use macOS's built-in php because brews' depends on broken curl-openssl
   # depends_on "php"
 
-  head "https://github.com/phacility/arcanist.git"
+  head "https://github.com/phacility/arcanist.git", :branch => "stable"
 
   def install
     libexec.install Dir["*"]
