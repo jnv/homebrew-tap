@@ -6,24 +6,16 @@ class Arcanist < Formula
   # depends_on "php"
 
   head "https://github.com/phacility/arcanist.git"
-  resource "libphutil" do
-    url "https://github.com/phacility/libphutil.git"
-  end
 
   def install
     libexec.install Dir["*"]
-
-    resource("libphutil").stage do
-      (buildpath/"libphutil").install Dir["*"]
-    end
-
     prefix.install Dir["*"]
-
     bin.install_symlink libexec/"bin/arc" => "arc"
 
-    cp libexec/"resources/shell/bash-completion", libexec/"resources/shell/arc-completion.zsh"
-    bash_completion.install libexec/"resources/shell/bash-completion" => "arc"
-    zsh_completion.install libexec/"resources/shell/arc-completion.zsh" => "_arc"
+    # Disabled since apparently arc is trying to be smart now and installs itself via arc shell-complete
+    #cp libexec/"resources/shell/bash-completion", libexec/"resources/shell/arc-completion.zsh"
+    #bash_completion.install libexec/"resources/shell/bash-completion" => "arc"
+    #zsh_completion.install libexec/"resources/shell/arc-completion.zsh" => "_arc"
   end
 
   test do
