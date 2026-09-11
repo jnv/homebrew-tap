@@ -1,0 +1,21 @@
+name: update twg
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./update-twg.sh
+      - run: |
+          if git diff --quiet; then exit 0; fi
+          version=$(sed -n 's|.*twg-darwin-arm64-v\([0-9.]*\)".*|\1|p' Formula/twg.rb)
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -am "twg $version"
+          git push
