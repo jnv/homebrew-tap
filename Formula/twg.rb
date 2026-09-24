@@ -1,6 +1,6 @@
 class Twg < Formula
   desc "Atlassian Teamwork Graph CLI"
-  homepage "https://teamwork-graph.atlassian.com/cli/AGENTS.md"
+  homepage "https://developer.atlassian.com/cloud/twg-cli/"
   license :cannot_represent
 
   livecheck do
