@@ -10,23 +10,23 @@ class Twg < Formula
 
   on_macos do
     on_arm do
-      url "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v1.4.2"
-      sha256 "5bf0af700075365955ad4f8d92973a82008f6c2b3f7e607e39a647057b340784"
+      url "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v1.4.3"
+      sha256 "c5bddef0df90040de1c094fa54a36fff4c21e5fb5071eb1a9d458fb1922caf62"
     end
     on_intel do
-      url "https://teamwork-graph.atlassian.com/cli/twg-darwin-x64-v1.4.2"
-      sha256 "c4df9f7a2fe88eee5996d67dd179b54c9d2121b837f07cf5f58a72b613862ea2"
+      url "https://teamwork-graph.atlassian.com/cli/twg-darwin-x64-v1.4.3"
+      sha256 "9683ffa5e7dae9c26fd9838cd7dcaf8f99d6de1d921a1a1d76ffb2fce340a124"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://teamwork-graph.atlassian.com/cli/twg-linux-arm64-v1.4.2"
-      sha256 "c5bd21ea94eaa95446897b1eee072b38af60da2c88056120ae2294aade79f2c0"
+      url "https://teamwork-graph.atlassian.com/cli/twg-linux-arm64-v1.4.3"
+      sha256 "bac5d8b219df1f2a7ba71f97f1df6cba45e5b2f12b235fdeb973b763126e3e96"
     end
     on_intel do
-      url "https://teamwork-graph.atlassian.com/cli/twg-linux-x64-v1.4.2"
-      sha256 "086662c6aa0d9e3d86c9f2f000115b8cc248d63152ab1f93e222e95515d05200"
+      url "https://teamwork-graph.atlassian.com/cli/twg-linux-x64-v1.4.3"
+      sha256 "f86458f43efaa5332bbee90d535643fdf6dc113982e272637bdfff1512f594a1"
     end
   end
 
