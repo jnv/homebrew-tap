@@ -3,6 +3,8 @@ class Twg < Formula
   homepage "https://developer.atlassian.com/cloud/twg-cli/"
   license :cannot_represent
 
+  disable! date: "2026-11-16", because: "Install teamwork-graph-cli from default Homebrew Cask."
+
   livecheck do
     url "https://teamwork-graph.atlassian.com/cli/install"
     regex(/DEFAULT_VERSION=["']?v?(\d+(?:\.\d+)+)["']?/i)
